@@ -24,5 +24,5 @@ with get_connection() as con:
     """)
     n = con.execute("SELECT COUNT(*) FROM ev_silver").fetchone()
     if n is None:
-            raise RuntimeError("COUNT(*) query returned no result")
+        raise RuntimeError("COUNT(*) query returned no result")
     print(f"Built ev_silver: {n[0]} rows")
